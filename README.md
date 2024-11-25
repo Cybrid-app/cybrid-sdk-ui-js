@@ -61,7 +61,7 @@ Once you have gone through Plaid and connected a bank account, the identity veri
 
 ## Installation
 
-Install Node. Current version: [Node@16.14.2](https://nodejs.org/en/)
+Install Node. Current version: [Node@20.14.0](https://nodejs.org/en/)
 
 Run `npm install` from the project root to install dependencies
 
