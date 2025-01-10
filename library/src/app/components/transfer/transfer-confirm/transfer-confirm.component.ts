@@ -115,8 +115,6 @@ export class TransferConfirmComponent implements OnInit, OnDestroy {
   onConfirmTransfer(): void {
     this.isLoading$.next(true);
 
-    console.log(this.quote$.getValue().deliver_amount);
-
     const postTransferBankModel: PostTransferBankModel = {
       external_bank_account_guid: this.data.externalBankAccountBankModel.guid,
       quote_guid: this.quote$.getValue().guid!,
