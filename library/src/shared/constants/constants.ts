@@ -25,7 +25,7 @@ export class Constants {
   static ROUTING = true;
   static ICON_HOST = 'https://images.cybrid.xyz/sdk/assets/svg/color/';
   static PERSONA_SCRIPT_SRC =
-    'https://cdn.withpersona.com/dist/persona-v5.1.2.js';
+    'https://cdn.withpersona.com/dist/persona-v5.1.3.js';
   static PLAID_SCRIPT_SRC =
     'https://cdn.plaid.com/link/v2/stable/link-initialize.js';
   static BTC_ICON = 'https://images.cybrid.xyz/sdk/assets/svg/color/btc.svg';
