@@ -30,7 +30,8 @@ import {
   PostTransferBankModel,
   QuoteBankModel,
   QuotesService,
-  TransfersService
+  TransfersService,
+  PostTransferParticipantBankModel
 } from '@cybrid/cybrid-api-bank-angular';
 
 // Utility
@@ -114,10 +115,26 @@ export class TransferConfirmComponent implements OnInit, OnDestroy {
   onConfirmTransfer(): void {
     this.isLoading$.next(true);
 
+    console.log(this.quote$.getValue().deliver_amount);
+
     const postTransferBankModel: PostTransferBankModel = {
       external_bank_account_guid: this.data.externalBankAccountBankModel.guid,
       quote_guid: this.quote$.getValue().guid!,
-      transfer_type: PostTransferBankModel.TransferTypeEnum.Funding
+      transfer_type: PostTransferBankModel.TransferTypeEnum.Funding,
+      source_participants: [
+        {
+          type: PostTransferParticipantBankModel.TypeEnum.Customer,
+          guid: <string>this.quote$.getValue().customer_guid,
+          amount: <string>this.quote$.getValue().deliver_amount
+        }
+      ],
+      destination_participants: [
+        {
+          type: PostTransferParticipantBankModel.TypeEnum.Customer,
+          guid: <string>this.quote$.getValue().customer_guid,
+          amount: <string>this.quote$.getValue().deliver_amount
+        }
+      ]
     };
 
     this.transfersService
