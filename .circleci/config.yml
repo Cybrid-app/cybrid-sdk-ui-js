@@ -15,7 +15,7 @@ executors:
 jobs:
   publish:
     docker:
-      - image: cimg/node:22.8.0
+      - image: cimg/node:22.14.0
     working_directory: ~/project
     steps:
       - checkout
@@ -37,7 +37,7 @@ jobs:
 
   check-versions:
     docker:
-      - image: cimg/node:22.8.0
+      - image: cimg/node:22.14.0
     working_directory: ~/project
     steps:
       - checkout
@@ -57,7 +57,7 @@ jobs:
 
   deploy-demo:
     docker:
-      - image: cimg/node:22.8.0
+      - image: cimg/node:22.14.0
     steps:
       - run:
           name: Trigger Github workflow
