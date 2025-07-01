@@ -57,7 +57,7 @@
     "@cypress/schematic": "2.5.2",
     "@types/big.js": "6.2.2",
     "@types/jasmine": "5.1.4",
-    "@types/node": "20.16.10",
+    "@types/node": "20.19.4",
     "@typescript-eslint/eslint-plugin": "5.56.0",
     "@typescript-eslint/parser": "5.56.0",
     "css-loader": "7.1.2",
